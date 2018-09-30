@@ -1,0 +1,27 @@
+.admin-header{
+	margin-top:0;
+	padding-top:0;
+}
+
+.admin-header h2{
+	margin-top:0;
+}
+
+.list-group-title{
+	background-color:#f5f5f5;
+	border-right:1px solid #ddd;
+	border-left:1px solid #ddd;
+	padding:6px 6px 6px 8px;
+}
+
+.sub-item{
+	padding-left:25px;
+}
+
+.item-arrow{
+	vertical-align:middle;
+}
+
+.bosluk{
+	margin-top: 100px;
+}

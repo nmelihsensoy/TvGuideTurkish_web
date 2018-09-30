@@ -1,0 +1,113 @@
+/*
+*
+* mGrid v1.3
+* Author: Nuri Melih Şensoy
+* 
+*/
+
+*, *:before, *:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.m_hidden-desktop{
+	display: none;
+}
+
+/*Clearfix*/
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Container */
+.container_960{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.container_1140{
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.row-pad [class*='m_col-']{
+	padding-bottom: 1rem;
+}
+
+/* If screen is larger then 640px(40rem)*/
+@media (min-width: 640px){
+	[class*='m_col-'] {
+		float: left;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+	
+	[class*='m_col-']{
+		padding-bottom: 0;
+	}
+	
+	/* Grid Widths */
+	.m_col-12 {width: 100%;}
+	.m_col-11{width: 91.6666666667%;}
+	.m_col-10{width: 83.3333333333%;}
+	.m_col-9{width: 75%;}
+	.m_col-8{width: 66.6666666667%;}
+	.m_col-7{width: 58.3333333333%;}
+	.m_col-6 {width: 50%;}
+	.m_col-5{width: 41.6666666667%;}
+	.m_col-4 {width: 33.3%;}
+	.m_col-3 {width: 24.95%;}
+	.m_col-2{width: 16.6666666667%;} 
+}
+
+/*Mobile*/
+@media (max-width: 480px){	
+	.m_hidden-phone{
+		display: none;
+	}
+	
+	.m_hidden-desktop{
+		display: inherit;
+	}
+
+	.m_hidden-tablet{
+		display: inherit;
+	}	
+}
+
+/*Tablet*/
+@media (min-width: 480px) and (max-width: 800px){
+	.m_hidden-tablet{
+		display: none;
+	}
+	
+	.m_hidden-phone{
+		display: inherit;
+	}
+	
+	.m_hidden-desktop{
+		display: inherit;
+	}	
+}
+
+/* Container Responsive*/
+@media screen and (max-width: 960px){
+	.container_960{
+		width: 96%;
+	}
+}
+
+@media screen and (max-width: 1140px){
+	.container_1140{
+		width: 96%;
+	}
+}
+

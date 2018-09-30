@@ -1,0 +1,8 @@
+body{
+	background:url('../img/bg.png') repeat;
+}
+
+.login-panel{
+	margin-top:50px;
+	opacity: 0.9;
+}
