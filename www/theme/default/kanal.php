@@ -10,7 +10,7 @@ if (!cookie("kanal_".$id)){
 <div class="main_wrapper full-width">
 	<div class="page_header">
 		<div class="container_1140 row row-pad clearfix text-center">
-		<img src="<?php echo 'http://tvyayinrehberi.com/uploads/channels/'.$kanal['kanal_logo']; ?>" width="40" height="40" alt="">
+		<img src="<?php echo URL."/uploads/channels/".$kanal['kanal_logo']; ?>" width="40" height="40" alt="">
 			<h2 class="mpzero"><?php echo $kanal['kanal_baslik']; ?></h2>
 		</div>
 	</div>
@@ -86,7 +86,7 @@ if (!cookie("kanal_".$id)){
 						$shuffle = $this->digerKanal($kanal['kanal_id']);
 						shuffle($shuffle);
 						foreach($shuffle as $row) : ?>
-						<li><a href="<?php echo URL.'/kanal/'.$row['kanal_link']; ?>"><img src="<?php echo 'http://tvyayinrehberi.com/uploads/channels/'.$row['kanal_logo']; ?>" width="60" height="60" alt=""><span><?php echo $row['kanal_kisa_baslik'] ? $row['kanal_kisa_baslik'] : $row['kanal_baslik']; ?></span></a></li>
+						<li><a href="<?php echo URL.'/kanal/'.$row['kanal_link']; ?>"><img src="<?php echo URL."/uploads/channels/".$kanal['kanal_logo']; ?>" width="60" height="60" alt=""><span><?php echo $row['kanal_kisa_baslik'] ? $row['kanal_kisa_baslik'] : $row['kanal_baslik']; ?></span></a></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>

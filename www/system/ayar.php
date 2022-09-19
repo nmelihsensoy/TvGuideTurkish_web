@@ -10,9 +10,9 @@ ini_set("display_errors", false);
 date_default_timezone_set('Europe/Istanbul');
 
 //Mysql Ayar
-define('DB_HOST', 'mysql:dbname=yayin;charset=utf8;host=127.0.0.1');
-define('DB_USER', 'DBUSERNAME');
-define('DB_PASS', 'DBPASSWORD');
+define('DB_HOST', 'mysql:dbname='.getenv('DBNAME').';charset=utf8;host='.getenv('DBHOST').'');
+define('DB_USER', getenv('DBUSERNAME'));
+define('DB_PASS', getenv('DBPASSWORD'));
 
 //Mysql Bağlantısı
 $db = new Database(DB_HOST, DB_USER, DB_PASS);

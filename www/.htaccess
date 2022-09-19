@@ -1,0 +1,18 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteRule ^sitemap.xml$ sitemap.php [L,NC]
+RewriteRule ^kanal/([0-9a-zA-Z-_]+)(/?)$ index.php?sayfa=kanal&link=$1
+RewriteRule ^kanal/([^/]*)/gun/([^/]*)(/?)$ index.php?sayfa=kanal&link=$1&gun=$2
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?sayfa=$1 [QSA,L]
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+AddDefaultCharset UTF-8

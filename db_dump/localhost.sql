@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.0.10.7
--- http://www.phpmyadmin.net
---
--- Anamakine: localhost
--- Üretim Zamanı: 19 Mar 2016, 13:37:58
--- Sunucu sürümü: 5.5.45-cll-lve
--- PHP Sürümü: 5.4.31
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 

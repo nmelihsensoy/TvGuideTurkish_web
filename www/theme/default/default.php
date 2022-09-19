@@ -10,7 +10,7 @@
 			<div class="m_col-3 yayin-grid">
 				<div class="yayin-box">
 					<div class="yayin-top clearfix">
-						<img src="<?php echo 'http://tvyayinrehberi.com/uploads/channels/'.$kanal['kanal_logo']; ?>" class="kanal-logo pull-left" alt="" width="50" height="50">
+						<img src="<?php echo URL."/uploads/channels/".$kanal['kanal_logo']; ?>" class="kanal-logo pull-left" alt="" width="50" height="50">
 						<h3 class="kanal-title mpzero"><a href="<?php echo URL."/kanal/".$kanal['kanal_link']; ?>"><?php echo $kanal['kanal_baslik']; ?></a></h3>
 					</div>
 					<ul class="yayin-list mpzero">
@@ -85,7 +85,7 @@
 							</div>
 							<div class="suan-kanal-logo pull-right">
 								<a href="<?php echo URL.'/kanal/'.$row['kanal_link']; ?>">
-								<img src="<?php echo 'http://tvyayinrehberi.com/uploads/channels/'.$row['kanal_logo']; ?>" alt="" width="50" height="50">
+								<img src="<?php echo URL."/uploads/channels/".$kanal['kanal_logo']; ?>" alt="" width="50" height="50">
 								<span><?php echo $row['kanal_baslik']; ?></span></a>
 							</div>
 						</div>
