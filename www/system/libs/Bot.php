@@ -9,21 +9,21 @@
 		private $db;
 
 		function __construct(){
-			$this->db = new Database('mysql:dbname=yayin;charset=utf8;host=127.0.0.1', 'DBUSERNAME', 'DBPASSWORD');
+			$this->db = new Database('mysql:dbname='.getenv('DBNAME').';charset=utf8;host='.getenv('DBHOST').'', getenv('DBUSERNAME'), getenv('DBPASSWORD'));
 		}
 
 		function kanalCurlSite($kanal){
 			$tarih = $this->tarih;
 			$user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; rv:1.7.3) Trans/20041002 Firefox/0.10';
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, 'http://DATAPROVIDERURL/zaman-akisi/'.$tarih);
+			curl_setopt($ch, CURLOPT_URL, 'http://'.getenv('BOTHOST').'/zaman-akisi/'.$tarih);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER , FALSE);
 	    	curl_setopt($ch, CURLOPT_RETURNTRANSFER , TRUE);
 	    	curl_setopt($ch, CURLOPT_FOLLOWLOCATION , TRUE);
 	    	curl_setopt($ch, CURLOPT_COOKIESESSION, true);
 		    curl_setopt($ch, CURLOPT_COOKIEJAR, "cookies.txt");
 		    curl_setopt($ch, CURLOPT_COOKIEFILE, "cookies.txt");
-	    	curl_setopt($ch, CURLOPT_REFERER, "http://DATAPROVIDERURL/yayin-akisi/".$kanal);
+	    	curl_setopt($ch, CURLOPT_REFERER, "http://'.getenv('BOTHOST').'/yayin-akisi/".$kanal);
 			curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
 			curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);
 			$icerik = curl_exec($ch);
@@ -33,7 +33,7 @@
 
 		function tarihCek(){
 			$html = new simple_html_dom();
-			$html->load($this->kanalCurlSite('http://DATAPROVIDERURL/'), true, false);
+			$html->load($this->kanalCurlSite('http://'.getenv('BOTHOST').'/'), true, false);
 			foreach($html->find('div.TVCalendar') as $article) {
 				foreach($article->find('div.number a') as $articles) {
 					$tarih = substr($articles->href, -10);

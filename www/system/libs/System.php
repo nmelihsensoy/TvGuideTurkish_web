@@ -154,10 +154,10 @@
 					$mail->Host = 'smtp.gmail.com';
 					$mail->Port = 465;
 					$mail->SMTPSecure = 'ssl';
-					$mail->Username = 'EMAILADDRESS';
-					$mail->Password = 'EMAILPASSWORD';
+					$mail->Username = getenv('GMAILADDRESS');
+					$mail->Password = getenv('GMAILPASSWORD');
 					$mail->CharSet = 'UTF-8';
-					$mail->AddAddress('EMAILADDRESS', 'NAME');
+					$mail->AddAddress(getenv('GMAILADDRESS'), 'BIZE ULASIN');
 
 					require(TEMPLATE."/iletisim.php");
 				break;

@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `ayarlar` (
 --
 
 INSERT INTO `ayarlar` (`site_url`, `site_tema`, `site_baslik`, `site_desc`, `site_keyw`, `admin_kadi`, `admin_sifre`, `site_durum`, `site_footer`, `id`) VALUES
-('http://tvyayinrehberi.com', 'default', 'Tv Yayın Rehberi', 'Televizyonların günlük yayın akış bilgilerini ve şuanda ne olduğunu öğrenebileceğiniz tv yayın rehberi, tv rehberi, tvde ne var', 'yayın akışları, tv yayın akışı, tv ne izlesem, tv şuan, tv şimdi, tv bugün, tv rehberi, televizyon, diziler, programlar, KANAL D, STAR TV, SHOW TV, ATV, TRT1, CNN TÜRK, NTV, CNBC-E, FOX TV, TV8, E2, TV2, KANALTÜRK, SAMANYOLU TV, NATIONAL GEOGRAPHIC, DISCOVERY CHANNEL, NTV SPOR, KANAL 7', 'admin', 'd71e9f8c59c725cb13bc6acde9cb4473', 1, 'Copyright © 2015 Tv Yayın Rehberi', 0);
+('http://localhost:8001', 'default', 'Tv Yayın Rehberi', 'Televizyonların günlük yayın akış bilgilerini ve şuanda ne olduğunu öğrenebileceğiniz tv yayın rehberi, tv rehberi, tvde ne var', 'yayın akışları, tv yayın akışı, tv ne izlesem, tv şuan, tv şimdi, tv bugün, tv rehberi, televizyon, diziler, programlar, KANAL D, STAR TV, SHOW TV, ATV, TRT1, CNN TÜRK, NTV, CNBC-E, FOX TV, TV8, E2, TV2, KANALTÜRK, SAMANYOLU TV, NATIONAL GEOGRAPHIC, DISCOVERY CHANNEL, NTV SPOR, KANAL 7', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 'Copyright © 2022 Tv Yayın Rehberi', 0);
 
 -- --------------------------------------------------------
 
