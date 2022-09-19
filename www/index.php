@@ -6,7 +6,6 @@
 	require_once('system/libs/Json.php');
 	require_once('system/libs/class.phpmailer.php');
 	require_once('system/libs/System.php');
-	
 
 	$bugun = date('dmY');
 	$gun = g('gun');
@@ -16,11 +15,15 @@
 	}else{
 		$dosya = $bugun;
 	}
-	
+
 	if(file_exists('json/'.$dosya.'.json')){
 		$jsonFile = 'json/'.$dosya.'.json';
 	}else{
 		$jsonFile = 'json/'.$bugun.'.json';
+		if(getenv('ISDEMO') == "true"){
+			shell_exec('rm $(ls json/ | grep -v demo.json|'.$bugun.'.json');
+			copy('json/demo.json', 'json/'.$bugun.'.json');
+		}
 	}
 
 	if($ayar['site_durum'] == 1){

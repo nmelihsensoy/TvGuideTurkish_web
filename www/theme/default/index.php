@@ -18,7 +18,7 @@
 <body>
 	<!-- Popup -->
 	<aside id="default-popup" class="avgrund-popup">
-		<img src="img/logo.png" class="pull-left" width="180" height="130" alt="">
+		<img src="<?php echo URL."/uploads/000000.gif"; ?>" class="pull-left" width="180" height="130" alt="">
 		<h2 class="mpzero"></h2>
 		<p class="mpzero"><strong>Tür: </strong> <span class="mpzero tur"></span></p>
 		<p class="mpzero"><strong>Özet: </strong><span class="mpzero ozet"></span></p>
@@ -104,12 +104,14 @@
 			}  
 		}); 
 
+		/**
 		setInterval(function() {
 			var date = new Date();
 			$('.now-saat h2').text(
 				date.getHours() + ":" + date.getMinutes()
 				);
 		}, 500);
+		**/
 
 		$(window).scroll(function(){
 		    if ($(this).scrollTop() > 1000){

@@ -4,11 +4,13 @@ services:
         build: .
         ports: 
             - "8001:80"
+        user: "${UID}:${GID}"
         environment:
             DBHOST: ${DBHOST}
             DBNAME: ${DBNAME}
             DBUSERNAME: ${DBUSERNAME}
             DBPASSWORD: ${DBPASSWORD}
+            ISDEMO: ${ISDEMO}
         volumes:
             - ./www:/var/www/html/
         links:

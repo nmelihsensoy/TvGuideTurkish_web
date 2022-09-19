@@ -86,7 +86,7 @@ if (!cookie("kanal_".$id)){
 						$shuffle = $this->digerKanal($kanal['kanal_id']);
 						shuffle($shuffle);
 						foreach($shuffle as $row) : ?>
-						<li><a href="<?php echo URL.'/kanal/'.$row['kanal_link']; ?>"><img src="<?php echo URL."/uploads/channels/".$kanal['kanal_logo']; ?>" width="60" height="60" alt=""><span><?php echo $row['kanal_kisa_baslik'] ? $row['kanal_kisa_baslik'] : $row['kanal_baslik']; ?></span></a></li>
+						<li><a href="<?php echo URL.'/kanal/'.$row['kanal_link']; ?>"><img src="<?php echo URL."/uploads/channels/".$row['kanal_logo']; ?>" width="60" height="60" alt=""><span><?php echo $row['kanal_kisa_baslik'] ? $row['kanal_kisa_baslik'] : $row['kanal_baslik']; ?></span></a></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>

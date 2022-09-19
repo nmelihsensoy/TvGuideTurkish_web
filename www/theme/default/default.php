@@ -43,12 +43,12 @@
 	</section>
 	<section class="banner">
 		<div class="container_1140 row row-pad clearfix">
-			<h2 class="mpzero text-center">Tvde Şuan</h2>
+			<h2 class="mpzero text-center">TV'de Şu An</h2>
 		</div>
 		<div class="container_1140 row row-pad clearfix">
 			<ul class="timeline">
 				<li class="now-saat">
-					<h2 class="mpzero text-center">22:58</h2>
+					<h2 class="mpzero text-center"><?php echo date("H:i"); ?></h2>
 				</li>
 				<?php 
 				foreach($this->kanalCek() as $row) :
@@ -85,8 +85,8 @@
 							</div>
 							<div class="suan-kanal-logo pull-right">
 								<a href="<?php echo URL.'/kanal/'.$row['kanal_link']; ?>">
-								<img src="<?php echo URL."/uploads/channels/".$kanal['kanal_logo']; ?>" alt="" width="50" height="50">
-								<span><?php echo $row['kanal_baslik']; ?></span></a>
+								<img src="<?php echo URL."/uploads/channels/".$row['kanal_logo']; ?>" alt="" width="50" height="50">
+								<span><?php echo $row['kanal_kisa_baslik'] ? $row['kanal_kisa_baslik'] : $row['kanal_baslik']; ?></span></a>
 							</div>
 						</div>
 					</div>
